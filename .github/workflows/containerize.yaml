@@ -8,10 +8,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - "app/**"
-      - "!**/README.md"
-
 jobs:
   docker:
     runs-on: ubuntu-latest
