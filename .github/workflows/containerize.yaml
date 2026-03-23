@@ -2,7 +2,7 @@ name: Containerize and push to Docker Hub
 
 env:
   DOCKERHUB_TAG: "${{ secrets.DOCKER_USERNAME }}/practicalgitops"
-  DOCKERFILE_PATH: devops-app
+  DOCKERFILE_PATH: .
 
 on:
   push:
