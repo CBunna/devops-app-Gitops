@@ -1,3 +1,4 @@
+![Build Status](https://github.com/CBunna/devops-app-Gitops/actions/workflows/containerize.yaml/badge.svg)
 # DevOps Survivor Kit
 
 A humorous React dashboard for surviving daily DevOps chaos — containerized and deployed via GitOps.
