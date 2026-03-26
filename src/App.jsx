@@ -542,7 +542,7 @@ function StatusBar() {
         <span className="marquee-text text-[#ffb00099]">{messages[msgIdx]}</span>
       </div>
       <div className="flex items-center gap-3 text-[#00ff4177]">
-        <span className="hidden md:inline">v{randInt(1,9)}.{randInt(0,9)}.{randInt(0,99)}-hotfix</span>
+        <span className="hidden md:inline">v{randInt(1, 9)}.{randInt(0, 9)}.{randInt(0, 99)}-hotfix</span>
         <span>{time.toLocaleTimeString()}</span>
       </div>
     </div>
@@ -563,7 +563,7 @@ export default function App() {
             <div>
               <h1
                 className="text-xl font-bold terminal-glow glitch-text"
-                data-text="DevOps Survivor Kit"
+                data-text="DevOps Survivor Cool Kit "
               >
                 DevOps Survivor Kit
               </h1>
