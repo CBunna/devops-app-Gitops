@@ -565,7 +565,7 @@ export default function App() {
                 className="text-xl font-bold terminal-glow glitch-text"
                 data-text="DevOps Survivor Cool Kit "
               >
-                DevOps Survivor Kit
+                DevOps Survivor Cool Kit
               </h1>
               <p className="text-xs text-[#00ff4177]">// production_firefighting_tools.sh — root@chaos:~$</p>
             </div>
