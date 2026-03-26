@@ -1,7 +1,7 @@
 name: Containerize and push to Docker Hub
 
 env:
-  DOCKERHUB_TAG: "${{ secrets.DOCKER_USERNAME }}/practicalgitops"
+  DOCKERHUB_IMAGE: "${{ secrets.DOCKER_USERNAME }}/practicalgitops"
   DOCKERFILE_PATH: .
 
 on:
@@ -27,9 +27,22 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
+        # --- NEW STEP: Extract metadata for tags ---
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.DOCKER_IMAGE }}
+          tags: |
+            type=raw,value=latest
+            type=sha,format=short
+            type=ref,event=branch
+
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
           context: "${{ env.DOCKERFILE_PATH }}"
           push: true
-          tags: "${{ env.DOCKERHUB_TAG }}:latest"
+          # Use the outputs from the 'meta' step instead of a hardcoded string
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
