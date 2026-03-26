@@ -563,7 +563,7 @@ export default function App() {
             <div>
               <h1
                 className="text-xl font-bold terminal-glow glitch-text"
-                data-text="DevOps Survivor Cool Kit "
+                data-text="DevOps Survivor Kit "
               >
                 DevOps Survivor Cool Kit
               </h1>
